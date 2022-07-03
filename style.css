@@ -13,6 +13,7 @@ body {
 }
 
 .side-bar {
+    height: 100%;
     background: rgb(54, 178, 227);
     width: max(200px, 15%);
     overflow: auto;
@@ -38,14 +39,17 @@ body {
 }
 
 .main-page {
+    height: 100%;
     width: 85%;
 }
 
+.main-page > * {
+    width: max(100%, 750px);
+}
+
 .top-bar {
-    position: relative;
     background-color: white;
-    height: 11%;
-    padding: 25px 75px;
+    height: max(20%, 150px);
     box-shadow: 0 3px 10px 0 rgb(171, 171, 171);
 }
 
@@ -61,21 +65,24 @@ body {
 }
 
 .first-container {
+    padding: 1.5% 2%;
     display: flex;
     align-items: center;
     font-size: 1.2rem;
 }
 
 .second-container {
+    padding-left: 2%;
+    padding-right: 2%;
     display: flex;
     align-items: center;
     font-size: 1.5rem;
 }
 
 .button-containers {
+    margin-left: auto;
     display: flex;
     align-items: center;
-    margin-left: auto;
     gap: 50px;
 }
 
@@ -91,18 +98,50 @@ body {
 
 .bottom-section {
     display: flex;
-    height: auto;
+    height: max(80%, 500px);
     background-color: lightgrey;
+    border: 1px solid black;
+}
+
+.project-container {
+    padding: 30px;
+    width: 50%;
+}
+
+.project-text,
+.announcements-text,
+.trending-text {
+    margin-bottom: 2%;
 }
 
 .project-grid {
     display: grid;
-    height: 50%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 10px;
+    overflow: auto;
+    height: 90%;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    grid-template-rows: repeat(3, 1fr);
+    gap: 25px;
 }
 
 .project-grid > div {
-    border: 1px solid black;
+    background-color: white;
+    border-radius: 8px;
+    border-left: 8px solid red;
+}
+
+.left-bar {
+    height: 100%;
+    width: 45%;
+}
+
+.left-bar > * {
+    padding: 30px;
+}
+
+.annoucements-section,
+.trending-section {
+    background-color: white;
+    height: 200px;
+    width: 50%;
+    border-radius: 8px;
 }
