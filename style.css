@@ -8,7 +8,7 @@ body, html {
 body {
     height: 100vh;
     display: grid;
-    grid-template-rows: .25fr 1fr;
+    grid-template-rows: 1fr 6fr;
     grid-template-columns: .2fr 1fr;
     background-color: beige;
     font-family: 'Lato', sans-serif;
